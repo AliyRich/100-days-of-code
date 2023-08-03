@@ -26,9 +26,34 @@
 
 // Working with javascript function that returns some results
 
-function myReturn (a,b) {
-    return a + b;
+// function myReturn (a,b) {
+//     return a + b;
+// }
+
+// let result = myReturn(3,7);
+// console.log(result);
+
+// ...100 days of javascript...
+
+// -------- DAY-3 -----------
+
+// Lets build a slot machine
+
+const prompt = require("prompt-sync")();
+
+const deposit = () => {
+
+    // while (true) {
+        const depositAmount = prompt("Enter a deposit amount: ");
+    const userDeposit = parseFloat(depositAmount);
+
+    if (isNaN(userDeposit) || userDeposit <= 0) {
+        console.log ("Invalid deposit amount, try again");
+    }
+    else {
+        return userDeposit;
+    }
 }
 
-let result = myReturn(3,7);
-console.log(result);
+deposit();
+
